@@ -44,6 +44,7 @@ body {
   
   .intro-text p {
     margin-bottom: 3rem;
+    max-width: 2rem;
     line-height: 1.6;
   }
 
@@ -371,43 +372,3 @@ body {
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-
-  /* -------------------------------------------------
-   Mobile-first tweaks: screens ≤ 767 px
-   ------------------------------------------------- */
-@media (max-width: 767px) {
-
-  /* Global sizing tweaks */
-  html { font-size: 90%; }
-  section { padding: 2rem 1rem; }
-
-  /* Header + nav */
-  header { padding: 1.25rem; }
-  header h1 { font-size: 2rem; }
-  nav { flex-wrap: wrap; gap: 1rem; }
-
-  /* Hero */
-  .hero { height: 60vh; padding: 1.5rem; }
-  .hero h1 { font-size: 2.4rem; }
-  .hero p  { font-size: 1.25rem; }
-
-  /* Intro text – undo the 2 rem bug */
-  .intro-text p { max-width: none; }
-
-  /* Gallery & card grids  ➜ single column */
-  .gallery           { grid-template-columns: 1fr; }
-  .bio-cards,
-  .cards-propuesta   { flex-direction: column; gap: 1.5rem; }
-  .profile-card,
-  .cards-propuesta .card { max-width: 90%; margin: 0 auto; }
-
-  /* Sliders */
-  .video-slider-wrapper,
-  .photo-slider-outer { flex-direction: column; }
-  .slider-btn,
-  .photo-btn { font-size: 1.5rem; margin: .5rem; }
-
-  /* Contact section */
-  .contacto-wrapper { flex-direction: column; }
-  .contacto-texto   { text-align: center; }
-}

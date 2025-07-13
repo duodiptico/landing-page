@@ -411,31 +411,6 @@ body {
   .contacto-wrapper { flex-direction: column; }
   .contacto-texto   { text-align: center; }
 
-  /* ————————————————
-    Bigger YouTube videos
-    ———————————————— */
-  .video-slider         { max-width: 100%; }   /* let it grow to the full viewport width   */
-  .video-slider iframe,
-  .yt-player,
-  iframe[src*="youtube"]{
-    width: 100% !important;   /* override the 560 px attribute */
-    height: auto !important;  /* let CSS calculate height      */
-    aspect-ratio: 16 / 9;     /* keep the classic 16:9 shape   */
-    border-radius: 12px;      /* (optional) soften the corners */
-  }
-
-    /* ——— Galería: show the whole photo on ≤ 767 px ——— */
-  .photo-slider        { height: auto; }          /* drop the hard 450 px box */
-  .photo-slide img     { height: auto !important; max-height: 70vh;
-                        object-fit: contain !important; }
-  .photo-slider-wrapper { display:flex; align-items:center; }
-}
-
-/* -------------------------------------------------
-   Un-collapse the sliders on ≤ 767 px
-   ------------------------------------------------- */
-@media (max-width: 767px) {
-
   /* 1️⃣  VIDEO  — keep a 16:9 box so the iframe has room */
   .video-slider {
     aspect-ratio: 16 / 9;   /* forces height = width / 1.777…  */
@@ -451,3 +426,4 @@ body {
     min-height: 240px;      /* prevents 0 px collapse          */
   }
 }
+

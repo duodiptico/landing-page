@@ -392,9 +392,10 @@ body {
   nav { flex-wrap: wrap; gap: 1rem; }
 
   /* Hero */
-  .hero { height: 60vh; padding: 1.5rem; }
+  .hero       { padding: 0;      overflow: hidden; }   /* no extra width */
   .hero h1 { font-size: 2.4rem; }
   .hero p  { font-size: 1.25rem; }
+  .hero-content { padding: 1.25rem; }                  /* keep inner breathing room */
 
   /* Intro text – undo the 2 rem bug */
   .intro-text p { max-width: none; }
@@ -434,12 +435,6 @@ body {
   .photo-slide img     { height: auto !important; max-height: 70vh;
                         object-fit: contain !important; }
   .photo-slider-wrapper { display:flex; align-items:center; }
-}
-
-/* -------------------------------------------------
-   Un-collapse the sliders on ≤ 767 px
-   ------------------------------------------------- */
-@media (max-width: 767px) {
 
   /* 1️⃣  VIDEO  — keep a 16:9 box so the iframe has room */
   .video-slider {
@@ -457,8 +452,3 @@ body {
   }
 }
 
-/* Kill the right-hand overflow only on phones */
-@media (max-width: 767px)  {
-  .hero       { padding: 0;      overflow: hidden; }   /* no extra width */
-  .hero-content { padding: 1.25rem; }                  /* keep inner breathing room */
-}

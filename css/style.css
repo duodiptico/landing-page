@@ -411,6 +411,31 @@ body {
   .contacto-wrapper { flex-direction: column; }
   .contacto-texto   { text-align: center; }
 
+  /* ————————————————
+    Bigger YouTube videos
+    ———————————————— */
+  .video-slider         { max-width: 100%; }   /* let it grow to the full viewport width   */
+  .video-slider iframe,
+  .yt-player,
+  iframe[src*="youtube"]{
+    width: 100% !important;   /* override the 560 px attribute */
+    height: auto !important;  /* let CSS calculate height      */
+    aspect-ratio: 16 / 9;     /* keep the classic 16:9 shape   */
+    border-radius: 12px;      /* (optional) soften the corners */
+  }
+
+    /* ——— Galería: show the whole photo on ≤ 767 px ——— */
+  .photo-slider        { height: auto; }          /* drop the hard 450 px box */
+  .photo-slide img     { height: auto !important; max-height: 70vh;
+                        object-fit: contain !important; }
+  .photo-slider-wrapper { display:flex; align-items:center; }
+}
+
+/* -------------------------------------------------
+   Un-collapse the sliders on ≤ 767 px
+   ------------------------------------------------- */
+@media (max-width: 767px) {
+
   /* 1️⃣  VIDEO  — keep a 16:9 box so the iframe has room */
   .video-slider {
     aspect-ratio: 16 / 9;   /* forces height = width / 1.777…  */
@@ -425,38 +450,4 @@ body {
     aspect-ratio: 3 / 2;    /* 1.5:1 works for most images     */
     min-height: 240px;      /* prevents 0 px collapse          */
   }
-
-/***************************/
-
-  /* 1. Wrapper becomes a 2-column grid
-       row 1: the media spans both columns
-       row 2: Prev | Next                      */
-  .video-slider-wrapper,
-  .photo-slider-outer {
-    display: grid;                 /* overrides the old flex rule */
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "media media"
-      "prev  next";
-    gap: .75rem;
-    justify-items: center;         /* centres the buttons */
-  }
-
-  /* 2. Tell each element where to live */
-  .video-slider            { grid-area: media; }
-  .photo-slider-wrapper    { grid-area: media; }
-
-  .slider-btn.prev         { grid-area: prev; }
-  .slider-btn.next         { grid-area: next; }
-
-  .photo-slider-outer .prev-photo { grid-area: prev; }
-  .photo-slider-outer .next-photo { grid-area: next; }
-
-  /* 3. A little polish */
-  .slider-btn,
-  .photo-btn {
-    margin: 0 .25rem;      /* snug spacing */
-    justify-self: center;
-  }
 }
-

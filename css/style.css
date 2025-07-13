@@ -1,8 +1,13 @@
+/* Put this near the top of the file */
+*, *::before, *::after { box-sizing: border-box; }
+
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
     color: #222;
+    overflow-x: hidden; 
   }
   header {
     background: #000;
@@ -450,4 +455,10 @@ body {
     aspect-ratio: 3 / 2;    /* 1.5:1 works for most images     */
     min-height: 240px;      /* prevents 0 px collapse          */
   }
+}
+
+/* Kill the right-hand overflow only on phones */
+@media (max-width: 767px)  {
+  .hero       { padding: 0;      overflow: hidden; }   /* no extra width */
+  .hero-content { padding: 1.25rem; }                  /* keep inner breathing room */
 }

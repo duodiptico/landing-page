@@ -452,3 +452,11 @@ body {
   }
 }
 
+/* Prevent hidden slides from widening the page */
+.video-slider,
+.photo-slider,
+.video-slider-wrapper,
+.photo-slider-outer {
+  overflow: hidden;   /* ✂️  no child may stick out horizontally */
+}
+

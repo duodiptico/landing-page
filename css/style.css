@@ -17,7 +17,7 @@ body {
   }
   header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3.0rem;
   }
   nav {
     background: #111;
@@ -275,7 +275,7 @@ body {
     border-radius: 12px;
   }
 
-  .hero h1 {
+  .hero h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
   }

@@ -377,6 +377,14 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
+  /* Prevent hidden slides from widening the page */
+  .video-slider,
+  .photo-slider,
+  .video-slider-wrapper,
+  .photo-slider-outer {
+    overflow: hidden;   /* ✂️  no child may stick out horizontally */
+  }
+
   /* -------------------------------------------------
    Mobile-first tweaks: screens ≤ 767 px
    ------------------------------------------------- */
@@ -449,6 +457,13 @@ body {
   .photo-slider {
     aspect-ratio: 3 / 2;    /* 1.5:1 works for most images     */
     min-height: 240px;      /* prevents 0 px collapse          */
+  }
+  /* Prevent hidden slides from widening the page */
+  .video-slider,
+  .photo-slider,
+  .video-slider-wrapper,
+  .photo-slider-outer {
+    overflow: hidden;   /* ✂️  no child may stick out horizontally */
   }
 }
 

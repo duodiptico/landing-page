@@ -1,5 +1,7 @@
 title: "Homepage"
 description: "Dúo Díptico: música en vivo con voz y guitarra acústica, pop-rock y clásicos para bodas, eventos privados y conciertos íntimos en toda España."
+url: "https://duodiptico.github.io"   # sin slash final
+baseurl: "/landing-page"              # nombre del repo con slash inicial
 plugins:
   - jekyll-seo-tag   # ← gem 1: auto meta tags
   - jekyll-sitemap   # ← gem 2: /sitemap.xml for search engines

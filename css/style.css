@@ -410,4 +410,18 @@ body {
   /* Contact section */
   .contacto-wrapper { flex-direction: column; }
   .contacto-texto   { text-align: center; }
+
+/* ————————————————
+   Bigger YouTube videos
+   ———————————————— */
+.video-slider         { max-width: 100%; }   /* let it grow to the full viewport width   */
+.video-slider iframe,
+.yt-player,
+iframe[src*="youtube"]{
+  width: 100% !important;   /* override the 560 px attribute */
+  height: auto !important;  /* let CSS calculate height      */
+  aspect-ratio: 16 / 9;     /* keep the classic 16:9 shape   */
+  border-radius: 12px;      /* (optional) soften the corners */
+}
+
 }

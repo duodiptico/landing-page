@@ -1,9 +1,3 @@
----
-layout: default          # pick the layout defined in _layouts/default.html
-title: Fast, modern landing page
-description: A concise meta-description for search engines.
----
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,6 +8,7 @@ description: A concise meta-description for search engines.
   <link rel="icon" type="image/x-icon" href="static/img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+{% seo %}
 </head>
 <body>
   <header>

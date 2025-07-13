@@ -430,3 +430,24 @@ body {
                         object-fit: contain !important; }
   .photo-slider-wrapper { display:flex; align-items:center; }
 }
+
+/* -------------------------------------------------
+   Un-collapse the sliders on ≤ 767 px
+   ------------------------------------------------- */
+@media (max-width: 767px) {
+
+  /* 1️⃣  VIDEO  — keep a 16:9 box so the iframe has room */
+  .video-slider {
+    aspect-ratio: 16 / 9;   /* forces height = width / 1.777…  */
+    min-height: 220px;      /* safety net on tiny screens      */
+  }
+  .video-slider iframe {
+    height: 100% !important;/* fill the box instead of “auto”  */
+  }
+
+  /* 2️⃣  GALERÍA — give the photo slider its own aspect-ratio */
+  .photo-slider {
+    aspect-ratio: 3 / 2;    /* 1.5:1 works for most images     */
+    min-height: 240px;      /* prevents 0 px collapse          */
+  }
+}

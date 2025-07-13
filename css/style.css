@@ -465,12 +465,7 @@ body {
   .photo-slider-outer {
     overflow: hidden;   /* ✂️  no child may stick out horizontally */
   }
-}
 
-/* ———————————————————————————————
-   Put both nav buttons together *under* the media
-   ——————————————————————————————— */
-@media (max-width: 767px) {
 
   /* 1. Wrapper becomes a 2-column grid
        row 1: the media spans both columns

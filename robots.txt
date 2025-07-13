@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://duodiptico.github.io/landing-page//sitemap.xml

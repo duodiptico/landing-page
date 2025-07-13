@@ -1,0 +1,5 @@
+title: "Duo Díptico"
+description: "Página oficial del dueto musical Dúo Díptico"
+plugins:
+  - jekyll-seo-tag   # ← gem 1: auto meta tags
+  - jekyll-sitemap   # ← gem 2: /sitemap.xml for search engines

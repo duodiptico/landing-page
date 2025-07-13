@@ -9,12 +9,46 @@ body {
     color: #222;
     overflow-x: hidden; 
   }
-  header {
-    background: #000;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+  header{
+    background:#000;
+    color:#fff;
+    padding:2rem;
+    text-align:center;
+    position:relative;         
   }
+  /* ---------- Header layout ---------- */
+  .header-inner{
+    max-width: 1200px;          /* keeps content centred on large screens */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Optional: let the title/tagline collapse nicely on tiny widths */
+  .branding { text-align: left; }
+
+  /* ---------- Language switch ---------- */
+  .lang-switch{
+    position:absolute;          /* anchor in the corner */
+    top:0.75rem;
+    right:0.75rem;
+
+    /* pretty-button styling */
+    background:#fff;
+    color:#000;
+    padding:0.45rem 0.9rem;
+    border-radius:9999px;       /* pill shape */
+    font-size:0.875rem;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    transition:background .3s, color .3s, transform .2s;
+  }
+  .lang-switch:hover{
+    background:#ffcc00;         /* pick any brand accent */
+    transform:translateY(-2px);
+  }
+
   header h1 {
     margin: 0;
     font-size: 3.0rem;
@@ -397,6 +431,14 @@ body {
   /* Header + nav */
   header { padding: 1.25rem; }
   header h1 { font-size: 2rem; }
+
+  header{ position:relative; }       /* create containing block */
+  .lang-switch{
+    position:absolute;               /* keep it visible even if flex wraps */
+    top:0.75rem;
+    right:0.75rem;
+  }
+
   nav { flex-wrap: wrap; gap: 1rem; }
 
   /* Hero */

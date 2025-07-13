@@ -1,4 +1,4 @@
-title: "Duo Díptico"
+title: "Homepage"
 description: "Dúo Díptico: música en vivo con voz y guitarra acústica, pop-rock y clásicos para bodas, eventos privados y conciertos íntimos en toda España."
 plugins:
   - jekyll-seo-tag   # ← gem 1: auto meta tags
